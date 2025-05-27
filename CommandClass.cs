@@ -43,9 +43,31 @@
                     Console.WriteLine($"cade name: {CodeName}");
                     break;
                 default:
-                    Console.WriteLine("Invalid rank. Cannot display name or code name.");   
+                    Console.WriteLine("Invalid rank. Cannot display name or code name.");
                     break;
             }
+        }
+    }
+
+    public class AirCommando : Commando
+    {
+        public AirCommando(string name, string codeName) : base(name, codeName) { }
+
+        public void Parachute()
+        {
+            Status = "Parachuting";
+            Console.WriteLine($"is parachuting from the sky!");
+        }
+    }
+
+    public class SeaCommando : Commando
+    {
+        public SeaCommando(string name, string codeName) : base(name, codeName) { }
+
+        public void Swim()
+        {
+            Status = "Swimming";
+            Console.WriteLine($"{CodeName} is swimming through the water!");
         }
     }
 }
