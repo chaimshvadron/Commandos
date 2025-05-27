@@ -8,6 +8,12 @@
             commando.Name = "Jsdsdsd";
             Console.WriteLine($"Commando Name: {commando.Name}");
             Console.WriteLine($"Commando Code Name: {commando.CodeName}");
+
+            Console.WriteLine("Commando Tools:");
+            foreach (var tool in commando.Tools)
+            {
+                Console.WriteLine($"- {tool}");
+            }
         }
     }
 }
