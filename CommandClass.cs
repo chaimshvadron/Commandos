@@ -26,7 +26,7 @@
             Console.WriteLine($"{Name} is hiding.");
         }
 
-        public void Attack()
+        public virtual void Attack()
         {
             Status = "Attacking";
             Console.WriteLine($"The commando with code name {CodeName} is attacking.");
@@ -61,7 +61,7 @@
             Console.WriteLine("is parachuting from the sky!");
         }
 
-        public void Attack()
+        public override void Attack()
         {
             Status = "Attacking from the air";
             Console.WriteLine("is attacking from the air!");
@@ -78,7 +78,7 @@
             Console.WriteLine("is swimming through the water!");
         }
 
-        public void Attack()
+        public override void Attack()
         {
             Status = "Attacking from the sea";
             Console.WriteLine("is attacking from the sea!");
