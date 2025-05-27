@@ -4,15 +4,21 @@
     {
         public static void Main(string[] args)
         {
-            Commando commando = new Commando("John", "EagleEye");
-            Console.WriteLine($"Commando Name: {commando.Name}");
-            Console.WriteLine($"Commando Code Name: {commando.CodeName}");
+            AirCommando airCommando = new AirCommando("Mike", "SkyWalker");
 
-            Console.WriteLine("Commando Tools:");
-            foreach (var tool in commando.Tools)
+            SeaCommando seaCommando = new SeaCommando("John", "WaveRider");
+
+            List<Commando> commandos = new List<Commando>
             {
-                Console.WriteLine($"- {tool}");
+                airCommando,
+                seaCommando
+            };
+
+            foreach (var commando in commandos)
+            {
+                commando.Attack();
             }
+
         }
     }
 }
