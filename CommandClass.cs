@@ -46,6 +46,8 @@
                     Console.WriteLine("Invalid rank. Cannot display name or code name.");
                     break;
             }
+
+            
         }
     }
 
@@ -53,10 +55,16 @@
     {
         public AirCommando(string name, string codeName) : base(name, codeName) { }
 
-        public void Parachute()
+        public void Ability()
         {
             Status = "Parachuting";
             Console.WriteLine("is parachuting from the sky!");
+        }
+
+        public void Attack()
+        {
+            Status = "Attacking from the air";
+            Console.WriteLine("is attacking from the air!");
         }
     }
 
@@ -64,10 +72,17 @@
     {
         public SeaCommando(string name, string codeName) : base(name, codeName) { }
 
-        public void Swim()
+        public void Ability()
         {
             Status = "Swimming";
             Console.WriteLine("is swimming through the water!");
         }
+
+        public void Attack()
+        {
+            Status = "Attacking from the sea";
+            Console.WriteLine("is attacking from the sea!");
+        }
+
     }
 }
