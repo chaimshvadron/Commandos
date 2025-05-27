@@ -56,7 +56,7 @@
         public void Parachute()
         {
             Status = "Parachuting";
-            Console.WriteLine($"is parachuting from the sky!");
+            Console.WriteLine("is parachuting from the sky!");
         }
     }
 
@@ -67,7 +67,7 @@
         public void Swim()
         {
             Status = "Swimming";
-            Console.WriteLine($"{CodeName} is swimming through the water!");
+            Console.WriteLine("is swimming through the water!");
         }
     }
 }
