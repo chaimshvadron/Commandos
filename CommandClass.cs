@@ -2,7 +2,7 @@
 {
     public class Commando
     {
-        public string Name { get; set; }
+        private string Name { get; set; }
         public string CodeName { get; set; }
         public string[] Tools { get; } = new string[] { "Hammer", "Chisel", "Rope", "Bag", "Canteen" };
         public string Status { get; set; }
@@ -30,6 +30,22 @@
         {
             Status = "Attacking";
             Console.WriteLine($"The commando with code name {CodeName} is attacking.");
+        }
+
+        public void SayName(string commanderRank)
+        {
+            switch (commanderRank)
+            {
+                case "GENERAL":
+                    Console.WriteLine($"name: {Name}");
+                    break;
+                case "COLONEL":
+                    Console.WriteLine($"cade name: {CodeName}");
+                    break;
+                default:
+                    Console.WriteLine("Invalid rank. Cannot display name or code name.");   
+                    break;
+            }
         }
     }
 }
