@@ -21,13 +21,16 @@ namespace Commandos.Program
 
     }
 
-    public class M16 : IWeapon, IShootable
+    public class M16 : Weapon, IWeapon, IShootable
     {
+
         public string Name { get; } = "M16";
         public string Manufacturer { get; } = "COLT";
         public int Bullets { get; set; } = 29;
 
-        public void Shoot()
+        public M16() : base("M16", "COLT", 29) { }
+
+        public new void Shoot()
         {
             if (Bullets > 0)
             {
@@ -41,13 +44,16 @@ namespace Commandos.Program
         }
     }
 
-    public class AK47 : IWeapon, IShootable
+    public class AK47 : Weapon, IWeapon, IShootable
     {
+
         public string Name { get; } = "AK-47";
         public string Manufacturer { get; } = "Kalashnikov";
         public int Bullets { get; set; } = 30;
 
-        public void Shoot()
+        public AK47() : base("AK-47", "Kalashnikov", 30) { }
+
+        public new void Shoot()
         {
             if (Bullets > 0)
             {
@@ -61,13 +67,16 @@ namespace Commandos.Program
         }
     }
 
-    public class Stone : IWeapon, IBreakable
+    public class Stone : Weapon, IWeapon, IBreakable
     {
+
         public string Name { get; } = "Stone";
         public string Manufacturer { get; } = "Nature";
         public string Status { get; set; } = "Intact";
         public int MaxHits { get; } = 5;
         public int CurrentHits { get; set; } = 0;
+
+        public Stone() : base("Stone", "Nature", 0) { }
 
         public void Hit()
         {
