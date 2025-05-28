@@ -8,7 +8,7 @@ namespace Commandos.Program
 
         {
             Console.WriteLine("What commando are you creating? (simple, air, sea)");
-            string type = Console.ReadLine().ToLower();
+            string type = Console.ReadLine()!.ToLower();
             Commando commando;
             switch (type)
             {
