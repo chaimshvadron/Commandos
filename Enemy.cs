@@ -15,15 +15,4 @@ namespace Commandos.Program
             Shout = "Enemy spotted!";
         }
     }
-
-    class EnemyFactory
-    {
-        private static List<Enemy> enemies = new List<Enemy>();
-        public static Enemy CreateEnemy(string name)
-        {
-            Enemy enemy = new Enemy(name);
-            enemies.Add(enemy);
-            return enemy;
-        }
-    }
 }
