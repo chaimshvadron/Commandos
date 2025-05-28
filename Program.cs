@@ -14,10 +14,10 @@
                 seaCommando
             };
 
-            foreach (var commando in commandos)
-            {
-                commando.Attack();
-            }
+            // foreach (var commando in commandos)
+            // {
+            //     commando.Attack();
+            // }
 
         }
     }
