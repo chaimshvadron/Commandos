@@ -20,4 +20,9 @@ namespace Commandos.Program
         }
 
     }
+
+    class Stone
+    {
+        
+    }
 }

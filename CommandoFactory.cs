@@ -8,6 +8,7 @@ namespace Commandos.Program
 
         {
             Console.WriteLine("What commando are you creating? (simple, air, sea)");
+            Console.WriteLine($"The details of the created soldier: name: {name} codeName: {codeName}");
             string type = Console.ReadLine()!.ToLower();
             Commando commando;
             switch (type)
